@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Laundry</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Include Tailwind CSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">News Laundry</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a id="sports" onclick="onNavItemClick('sports')" class=" nav-item mr-5 cursor-pointer hover:text-gray-900">Sports</a>
+            <a id="politics" onclick="onNavItemClick('politics')" class=" nav-item mr-5 cursor-pointer hover:text-gray-900">Politics</a>
+            <a id="finance" onclick="onNavItemClick('finance')" class="nav-item mr-5 cursor-pointer hover:text-gray-900">Finance</a>
+            <a id="tech" onclick="onNavItemClick('tech')" class="nav-item mr-5 cursor-pointer hover:text-gray-900">Tech</a>
+          </nav>
+          <input id="news-input" class="width:5rem m-3 bg-blue-100 rounded h-8 p-2" type="search" placeholder="type here">
+          <button id="news-btn" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Search
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+    </header>
+    <hr>
+    <main>
+        <div id="card-container" class="card-container flex">
+
+        </div>
+    </main>  
+    <template id="template-news-card" >
+        <div class="card">
+            <div class="card-header">
+                <img id="news-img" src="https://via.placeholder.com/400x200" alt="news-image">
+            </div>
+            <div class="card-content">
+                <h3  id="news-title" >This is the Title</h3>
+                <h6 class="news-source" id="news-source">End gadget</h6>
+                <p class="news-desc" id="news-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate dolore necessitatibus eius.</p>
+            </div>
+        </div>
+
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
